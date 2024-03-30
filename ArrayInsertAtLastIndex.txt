@@ -1,0 +1,27 @@
+class ArrayInsertAtLast{
+    int []insertAtLastIndex(int a[],int value){
+        int[] b=new int[a.length+1];
+        for(int i=0;i<b.length;i++){
+            if(i<a.length){
+                b[i]=a[i];
+            }
+            else{
+                b[i]=value;
+            }
+        }
+        return b;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		int a[]={3,5,1,3,4};
+		int v=5;
+		ArrayInsertAtLast c=new ArrayInsertAtLast();
+		a=c.insertAtLastIndex(a,v);
+		for(int i:a){
+		    System.out.println(i +" ");
+		}
+	}
+}

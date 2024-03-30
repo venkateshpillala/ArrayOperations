@@ -1,0 +1,27 @@
+class LastIndexOf{
+    int lastIndexOf(int a[],int val){
+        int count=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]==val)
+            count++;
+        }
+        int b[]=new int[count];
+        
+        for(int i=0;i<a.length;i++){
+            if(a[i]==val){
+                b[--count]=i;
+            }
+        }
+       
+        return b[0];
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		int a[]={4,2,3,1,2,4,5,3,4,9};
+		LastIndexOf l=new LastIndexOf();
+		int value=l.lastIndexOf(a,2);
+		System.out.println(value);
+	}
+}

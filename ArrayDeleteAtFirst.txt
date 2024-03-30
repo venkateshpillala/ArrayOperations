@@ -1,0 +1,20 @@
+class ArrayDeleteAtFirst{
+    int []deleteAtFirst(int a[]){
+        int b[]=new int[a.length-1];
+        int j=1;
+        for(int i=0;i<b.length;i++){
+            b[i]=a[j++];
+        }
+        return b;
+    }
+}
+class Main{
+    public static void main(String args[]){
+        int a[]={4,2,3,1,5,7};
+        ArrayDeleteAtFirst c=new ArrayDeleteAtFirst();
+        a=c.deleteAtFirst(a);
+        for(int i:a){
+            System.out.print(" "+i);
+        }
+    }
+}

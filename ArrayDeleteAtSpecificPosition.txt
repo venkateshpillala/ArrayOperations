@@ -1,0 +1,23 @@
+class ArrayDeleteSpecificPosition{
+    int []deleteSpecificPosition(int a[],int index){
+        int b[]=new int[a.length-1];
+        int j=0;
+        for(int i=0;i<a.length;i++){
+           if(i!=index){
+             b[j++]=a[i];  
+           }
+        }
+        
+        return b;
+    }
+}
+class Main{
+    public static void main(String args[]){
+        int a[]={4,2,3,1,5,7};
+        ArrayDeleteSpecificPosition c=new ArrayDeleteSpecificPosition();
+        a=c.deleteSpecificPosition(a,3);
+        for(int i:a){
+            System.out.print(" "+i);
+        }
+    }
+}	

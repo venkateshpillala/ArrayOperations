@@ -1,0 +1,25 @@
+class ArrayFill{
+    int []arrayFill(int[]a,int value){
+        for(int i=0;i<a.length;i++){
+            a[i]=value;
+        }
+        return a;
+    }
+    int []arrayFill(int a[],int firstIndex,int lastIndex,int value){
+        for(int i=firstIndex;i<lastIndex;i++){
+            a[i]=value;
+        }
+        return a;
+    }
+}
+class Main{
+    public static void main(String []args){
+        int a[]=new int[10];
+        ArrayFill b=new ArrayFill();
+        a=b.arrayFill(a,5);
+        a=b.arrayFill(a,3,7,10);
+        for(int i=0;i<a.length;i++){
+            System.out.println(a[i]+" ");
+        }
+    }
+}

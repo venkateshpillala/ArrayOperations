@@ -1,0 +1,26 @@
+class InsertAtSpeicificposition{
+    int []insertAtPosition(int a[],int index,int value){
+        int []b=new int[a.length+1];
+        int j=0;
+        for(int i=0;i<b.length;i++){
+           if(index==i){
+               b[i]=value;
+           }
+           else{
+               b[i]=a[j++];
+           }
+        }
+        return b;
+    }
+}
+class Main{
+    public static void main(String args[]){
+        int []a={3,5,4,1,2,9};
+        InsertAtSpeicificposition i=new InsertAtSpeicificposition();
+        int v=6;
+         a=i.insertAtPosition(a,3,v);
+        for(int e:a){
+            System.out.print(" "+e);
+        }
+    }
+}
